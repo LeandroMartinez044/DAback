@@ -1,4 +1,4 @@
-package com.deliciasazucena.order.model;
+package com.deliciasazucena.order.domain.model;
 
 import java.util.List;
 

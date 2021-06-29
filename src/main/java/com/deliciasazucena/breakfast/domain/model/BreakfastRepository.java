@@ -1,5 +1,6 @@
-package com.deliciasazucena.breakfast.model;
+package com.deliciasazucena.breakfast.domain.model;
 
+import com.deliciasazucena.breakfast.domain.model.Breakfast;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

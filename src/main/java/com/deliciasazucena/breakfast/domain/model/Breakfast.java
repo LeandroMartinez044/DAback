@@ -1,4 +1,4 @@
-package com.deliciasazucena.breakfast.model;
+package com.deliciasazucena.breakfast.domain.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -38,7 +38,7 @@ public class Breakfast {
   public Breakfast(final String theName, final String theDescription,
                    final Double thePrice) {
     Validate.notEmpty(theName, "The name cannot be empty.");
-    Validate.notEmpty(theDescription, "The name cannot be empty.");
+    Validate.notEmpty(theDescription, "The description cannot be empty.");
     Validate.notNull(thePrice, "The price cannot be null");
 
     this.name = theName;
@@ -57,15 +57,15 @@ public class Breakfast {
     this.price = thePrice;
   }
 
-  public Long getId() {
-    return id;
-  }
-
   public String getName() {
     return name;
   }
 
   public String getDescription() {
     return description;
+  }
+
+  public Double getPrice() {
+    return price;
   }
 }

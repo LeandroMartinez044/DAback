@@ -2,10 +2,11 @@ package com.deliciasazucena;
 
 import javax.persistence.EntityManager;
 
-import com.deliciasazucena.breakfast.model.BreakfastCreator;
-import com.deliciasazucena.breakfast.model.BreakfastRepository;
-import com.deliciasazucena.order.model.OrderRepository;
-import com.deliciasazucena.order.model.OrderRequester;
+import com.deliciasazucena.breakfast.application.BreakfastCreator;
+import com.deliciasazucena.breakfast.application.BreakfastRequester;
+import com.deliciasazucena.breakfast.domain.model.BreakfastRepository;
+import com.deliciasazucena.order.domain.model.OrderRepository;
+import com.deliciasazucena.order.domain.model.OrderRequester;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -30,6 +31,12 @@ public class DeliciasAzucena{
   public BreakfastCreator breakfastCreator(
     final BreakfastRepository theBreakfastRepository){
     return new BreakfastCreator(theBreakfastRepository);
+  }
+
+  @Bean
+  public BreakfastRequester breakfastRequester(
+    final BreakfastRepository theBreakfastRepository){
+    return new BreakfastRequester(theBreakfastRepository);
   }
 
 }

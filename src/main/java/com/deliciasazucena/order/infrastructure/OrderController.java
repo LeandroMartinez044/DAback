@@ -1,6 +1,8 @@
-package com.deliciasazucena.order.application;
+package com.deliciasazucena.order.infrastructure;
 
-import com.deliciasazucena.order.model.OrderRequester;
+import com.deliciasazucena.order.application.OrderCommand;
+import com.deliciasazucena.order.application.OrderDTO;
+import com.deliciasazucena.order.domain.model.OrderRequester;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

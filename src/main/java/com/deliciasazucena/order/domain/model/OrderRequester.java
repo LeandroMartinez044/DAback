@@ -1,7 +1,6 @@
-package com.deliciasazucena.order.model;
+package com.deliciasazucena.order.domain.model;
 
-import com.deliciasazucena.breakfast.model.Breakfast;
-import com.deliciasazucena.breakfast.model.BreakfastRepository;
+import com.deliciasazucena.breakfast.domain.model.BreakfastRepository;
 import org.apache.commons.lang3.Validate;
 
 public class OrderRequester {
